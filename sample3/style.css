@@ -1,0 +1,5 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* p5.js 캔버스 주변의 불필요한 여백과 스크롤바를 완전히 제거 */
+}
