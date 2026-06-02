@@ -16,25 +16,27 @@ body {
   padding: 40px 20px;
 }
 
+/* 🌟 타이틀 커스텀: 글씨 크기 확대 및 두께 최대화 */
 header {
   text-align: center;
   margin-bottom: 40px;
 }
 
 header h1 {
-  font-size: 2.8rem;    
-  font-weight: 900;    
+  font-size: 2.8rem;     /* 글씨 크기를 아주 크게 변경 */
+  font-weight: 900;     /* 글씨 굵기를 최고로 두껍게 고정 */
   margin-bottom: 12px;
   color: #4dadff;
-  letter-spacing: -1px; 
+  letter-spacing: -1px;
+}
 
 header p {
   color: #a0a0a5;
-  font-size: 1.1rem;    
+  font-size: 1.1rem;    /* 학번/이름도 잘 보이게 크기 최적화 */
   font-weight: 500;
 }
 
-/* 2행 2열 구조 고정 (가로폭 300px 카드 2개 + 여백 20px = 총 620px) */
+/* 2행 2열 격자 구조 복구 (가로폭 300px 카드 2개 + 여백 20px = 총 620px) */
 #projects {
   display: grid;
   grid-template-columns: 300px 300px;
@@ -44,7 +46,7 @@ header p {
   margin-bottom: 40px;
 }
 
-/* 카드 공통 스타일 */
+/* 카드 공통 스타일 복구 */
 #projects .cell {
   background: #2a2a35;
   border-radius: 12px;
@@ -86,10 +88,10 @@ header p {
 }
 
 /* --------------------------------------------------
-   🌟 각 과제 비율별 픽셀 정밀 커스텀 (핵심 영역)
+   🌟 각 샘플 크기 및 비율 유지 커스텀 고정
 -------------------------------------------------- */
 
-/* 가로형 과제 (sample1, 4): 원래 600x400 -> 0.5배 축소해서 300x200 크기 맞춤 */
+/* 가로형 과제 (sample1, 4): 원래 600x400 -> 0.5배 축소 */
 .card-horizontal .iframe-container {
   height: 200px; 
 }
@@ -99,7 +101,7 @@ header p {
   transform: scale(0.5); 
 }
 
-/* 세로형 과제 (sample2, 3): 원래 400x600 -> 0.75배 축소해서 가로폭 300px, 세로폭 450px 맞춤 */
+/* 세로형 과제 (sample2, 3): 원래 400x600 -> 0.75배 축소 */
 .card-vertical .iframe-container {
   height: 450px; 
 }
