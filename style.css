@@ -1,0 +1,115 @@
+/* 전체 기본 세팅 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Malgun Gothic', dotum, sans-serif;
+}
+
+body {
+  background: #1e1e24;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #4dadff;
+}
+
+header p {
+  color: #a0a0a5;
+  font-size: 1rem;
+}
+
+/* 2행 2열 구조 고정 (가로폭 300px 카드 2개 + 여백 20px = 총 620px) */
+#projects {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  gap: 20px;
+  width: 100%;
+  max-width: 620px;
+  margin-bottom: 40px;
+}
+
+/* 카드 공통 스타일 */
+#projects .cell {
+  background: #2a2a35;
+  border-radius: 12px;
+  border: 1px solid #3f3f50;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 300px;
+}
+
+#projects .cell:hover {
+  transform: translateY(-5px);
+  border-color: #4dadff;
+}
+
+.card-header {
+  background: #343444;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-bottom: 1px solid #3f3f50;
+  color: #e0e0e5;
+}
+
+.iframe-container {
+  width: 100%;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+#projects .cell iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  transform-origin: top left;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------
+   🌟 각 과제 비율별 픽셀 정밀 커스텀 (핵심 영역)
+-------------------------------------------------- */
+
+/* 가로형 과제 (sample1, 4): 원래 600x400 -> 0.5배 축소해서 300x200 크기 맞춤 */
+.card-horizontal .iframe-container {
+  height: 200px; 
+}
+.card-horizontal iframe {
+  width: 600px;
+  height: 400px;
+  transform: scale(0.5); 
+}
+
+/* 세로형 과제 (sample2, 3): 원래 400x600 -> 0.75배 축소해서 가로폭 300px, 세로폭 450px 맞춤 */
+.card-vertical .iframe-container {
+  height: 450px; 
+}
+.card-vertical iframe {
+  width: 400px;
+  height: 600px;
+  transform: scale(0.75); 
+}
+
+footer {
+  color: #636370;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
