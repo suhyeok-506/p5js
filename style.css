@@ -22,15 +22,16 @@ header {
 }
 
 header h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
+  font-size: 2.8rem;    
+  font-weight: 900;    
+  margin-bottom: 12px;
   color: #4dadff;
-}
+  letter-spacing: -1px; 
 
 header p {
   color: #a0a0a5;
-  font-size: 1rem;
+  font-size: 1.1rem;    
+  font-weight: 500;
 }
 
 /* 2행 2열 구조 고정 (가로폭 300px 카드 2개 + 여백 20px = 총 620px) */
